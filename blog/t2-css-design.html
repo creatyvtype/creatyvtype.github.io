@@ -21,7 +21,85 @@
 
 <div id="blog_entry">
   <p>
-  Coming Soon! Check out the archive.
+  I learned SO MUCH this week. This bootcamp is supposed to be 15-25 hours a week. I spent about 35 hours because I was researching so dang much. Here's the gist:
+  </p>
+  <p>
+  CSS. It means Cascading Style Sheets. It's applied to a basic html page by linking them like this in the html file. If CSS file is called example.css:
+    <p>
+  <link rel="stylesheet" type="text/css" href="example.css">
+    </p>
+  This goes into your &lt;head&gt; tag.
+  </p>
+  <p>
+    The hardest thing I had to learn in CSS was about boxes and how to move them. So every element in HTML is a box. Everything. An image is a box. This paragraph is a box within my box for paragraphs. EVERYTHING IS A BOX. This is super important to remember because boxes inside boxes is how you move everything around.
+  </p>
+  <img id="Box_example" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/blog/BoxesExample.png?raw=true"/>
+  <p>
+    In this example, you can see these boxes. Imagine the Yellow sidebar having words or logos. Either way, boxes. There's a header, and a footer, and a body. Basic layout for a basic page. I would start by making sure in the HTMl code that every box is a part of a bigger box that's easy to manipulate. For example, the header is one box, then a box for the body that includes BOTH the yellow and red boxes, then the footer box. The yellow box then has the three orange boxes, which since they're in a row, are easy to manipulate with no more sub-boxing.
+  </p>
+  <p>
+    The red body box, however, is a little trickier. You could put them all in and hope they stack right, or you could divide it again so you just deal with the two on the left and the two on the right, or the two on top and the two on bottom. It just depends on what they'll be used for. If it makes more sense for the left/right coupling based on the content you'll put in, then go for it.
+  </p>
+  <p>
+    Phew! Boxes boxes boxes. Reminds me of chemistry in high school (my teacher had this method of converting units using boxes you would draw, and he'd always say "Boxes boxes boxes". Heheh. Anyways...)
+  </p>
+  <p>
+    Now for the better stuff. Displays and positioning. Here's the information I learned that might make things easier since no one site can just give basics (except for <a href="http://learn.shayhowe.com/">this one</a>, which is where I learned most of this stuff in the end.)
+  </p>
+  <p>
+    Display Basics: block, inline, inline-block
+  </p>
+  <ul>Block
+    <li>Width starts at 100%, can be changed</li>
+    <li>Next block item starts a new line</li>
+    <li>Float property will only work with this</li>
+    <li>Good for header/footer. Big horizontal stretches.</li>
+    <li>This is already preset as standard for most big box elements</li>
+  </ul>
+  <ul>Inline
+    <li>Takes width of content</li>
+    <li>Other inline boxes will line up directly to left or right of this as organized in HTML file.</li>
+    <li>Really only good for a few words, like bars on the navigation bar (although there's a really good &lt;nav&gt; tag you can use).</li>
+    <li>These can't have fixed sizes for width and height</li>
+  </ul>
+  <ul>Inline-Block (the best!)
+    <li>Behaves like a Block element</li>
+    <li>Dimensions can be set</li>
+    <li>All elements with this display will set up in line right next to the previous one until the edge of the box containing them, then they'll start a new line</li>
+    <li>PERFECT for the float property</li>
+    <li>Whitespace becomes an issue... remove by connecting the tags like this "&lt;/element&gt;&lt;element&gt;" with no space in between, or fabricate the space using a comment marker like this: "&lt;/element&gt;&lt;!--  comment if you want  --&gt;" This takes care of most whitespace issues, but play with it.</li>
+  </ul>
+  <p>
+    Positioning Basics: static, fixed, relative and absolute
+  </p>
+  <p>Static: Default
+  </p>
+  <ul>Fixed
+    <li>Relative to browser</li>
+    <li>This is the fun one where when you scroll, the box stays in the same place!</li>
+  </ul>
+  <ul>Relative
+    <li>Means relative to its own static position</li>
+    <li>Use "left/right/top/bottom: value(px/em)"</li>
+    <li>Will overlap with other elements, not moving them in the process.</li>
+    <li>Doesn't make other things wrap around it like text</li>
+  </ul>
+  <ul>Absolute
+    <li>Will move in relation to its direct parent element (not itself) if the parent element is also not static.</li>
+    <li>Its original space isn't preserved, so other things can occupy that space.</li>
+  </ul>
+  <p>
+    Float, mentioned above, when given the value left or right, will move all the way to the left/right of its container. Kind of handy!
+  </p>
+  <img src="http://www.w3.org/TR/REC-CSS2/images/boxdim.gif"/>
+  <p>
+    Margins borders and padding. So every element actually has the properties in the above photo. When you set a width and height, it only affects the inner box. When you add padding, a border, or margin, it adds to the total box dimensions. Example, if you set a box with a width of 10px, add a border of 2px (will add twice on each side), and a margin of 5px (will add twice on each side), your new box width is actually 24px! THAT'S why it's moving all those other boxes on your friggin' screen! There's only one solution to this... a -webkit-box-sizing property you can set to "content-box/padding-box/border/box". It sets is so the width and height actually starts at the property you set, but it still doesn't reach the margins! These will still be added.
+  </p>
+  <p>
+    One last important note: IDs and Classes. When you're making your various boxes, big or small, and you want to position them, but you've called on them all using the &lt;div&gt; element, when you try to style div in your stylesheet, all of them are going to move! For that, we set the tag with an ID or a Class. ID will change that SPECIFIC box in html it looks like: &lt;div id="name_your_id_here"&gt; and close it regularly. In CSS, to change it, you put: #name_your_id_here {} and continue. Classes works similarly, but can apply to multiple elements of that class. Set it the same way as ID in html, just use "class" instead of "id". In CSS, however, you call it with this: .class_name {}. Good? NOW GO FORTH AND CODE!
+  </p>
+  <p>
+    Phew. Again.
   </p>
 </div>
 

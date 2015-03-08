@@ -124,3 +124,7 @@ li {
 .archive_date {
   font-size: 10px;
 }
+
+#box_example {
+  width: 500px;
+}
