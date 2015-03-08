@@ -4,17 +4,17 @@ body {
 }
 
 a:link {
-  color: royalblue;
+  color: rgb(100, 185, 90);
   font-weight: bold;
   text-decoration: none;
 }
 
 a:visited {
-  color: rgb(90, 181, 70);
+  color: rgb(208, 61, 195);
 }
 
 a:hover {
-  color: darkblue;
+  color: rgb(100, 185, 90);
 }
 
 #blog_head {
