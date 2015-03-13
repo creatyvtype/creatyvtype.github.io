@@ -1,40 +1,99 @@
-<!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Majd's DBC Blog</title>
-  <LINK REL="SHORTCUT ICON" HREF="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/ArteMasksLogo.png?raw=true"/>
+<!DOCTYPE html><html lang="en-US"><head>
+  <title>Majd Murad</title>
+  <LINK REL="SHORTCUT ICON" HREF="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/ArteMasksLogo.png?raw=true"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-   <meta charset="UTF-8">
-   <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
-   <link rel="stylesheet" type="text/css" href="../default.css">
-</head>
+  <link rel="stylesheet" type="text/css" href="../default.css">
+  <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+</head><body>
 
-<body>
+<!-- TO UPDATE PAGE
+  1) Change Blog href in Nav
+  2) Update Blog Head (has own list)
+  3) Add entry to Archive
+  4) Add blog entry
+  5) Old pages need new Nav link, archive, button adjustment.
+  6) Add to INDEX (fix blog nav href, copy head and some body)
+-->
+
+<nav>
+  <span id="majd">Majd Murad</span>
+  <a class="nav" href="http://creatyvtype.github.io">Home</a>
+  <a class="nav" href="http://creatyvtype.github.io">About Me</a>
+  <a id="current_page" class="nav" href="http://creatyvtype.github.io/blog/c3-thinking-style.html" target=_blank>Blog</a>
+  <a class="nav" href="http://creatyvtype.github.io">Tech</a>
+  <a class="nav" href="http://artemasks.com">Mask Making</a>
+  <a class="nav" href="http://creatyvtype.github.io">Theatre</a>
+  <form id="search" action="/search" method="get" autocomplete="off">
+    <input name="q" type="text" placeholder="search" value tabindex="1" autocomplete="off" maxlength="240">
+  </form>
+</nav>
+
+<aside>
+  <img id="selfie" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/Gravatar.JPG?raw=true"/>
+  <a href="http://github.com/creatyvtype"<img class="social_link" id="github" src="./github_logo/png/github-mark-64px.png"/></a>
+  <a href="https://www.linkedin.com/pub/majd-murad/4a/a16/907" target="blank"><img class="social_link" id="linkedin" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/LinkedInLogo.png?raw=true"/></a>
+  <a href="https://twitter.com/ShaikhMajdi" target=_blank><img class="social_link" id="twitter" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/TwitterLogo.png?raw=true"/></a>
+  <a href=mailto:murad.majd@gmail.com?subject=From%20Your%20Website><img class="social_link" id="gmail" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/gmaillogo.png?raw=true"/></a>
+</aside>
+
+<div id="main_body">
+
 <div id="blog_head">
-  <a class="button" id="left" href="http://creatyvtype.github.io/blog/t2-css-design.html">&lt;</a>
-<div id="blog_head_text">
-  <h1 id="blog_title">I'm ObseCSSed</h1>
-  <h2 id="blog_subtitle">Working with HTML and CSS</h2>
-  <h4 id="blog_date">Sun 3/8/15</h4>
-</div>
+   <!-- TO UPDATE
+  1) Change left button href
+  2) Change blog title href to same
+  3) Change blog subtitle and date
+  4) Change right button to prev blog href
+-->
+  <a class="button" id="left" href="http://creatyvtype.github.io/blog/t3-arrays-hashes.html">&lt;</a>
+  <a href="http://creatyvtype.github.io/blog/c3-thinking-style.html">
+  <div id="blog_head_text">
+    <h2 id="blog_title">Majd's Blog</h2>
+    <h2 id="blog_subtitle">I'm Obse<span class="red">CSS</span>ed</h2>
+    <h4 id="blog_date">3/8/15</h4>
+  </div><a/>
   <a class="button" id="right" href="http://creatyvtype.github.io/blog/c1-chefs-kitchen.html">&gt;</a>
+</div>
+
+<div id="blog_archive">
+  <!--TO UPDATE
+Add new <li> tag to top of line. -->
+  <h3>Blog Archive</h3>
+  <ul id="arch_list">
+    <li><a href="http://creatyvtype.github.io/blog/c3-thinking-style.html">
+      Gregoric Thinking Style<br><span class="archive_date">
+      3/13/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/t3-arrays-hashes.html">
+      Ruby Arrays and Hashes<br><span class="archive_date">
+      3/13/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/t2-css-design.html">
+      I'm ObseCSSed<br><span class="archive_date">
+      3/8/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/c1-chefs-kitchen.html">
+      Chefs in the Kitchen<br><span class="archive_date">
+      2/28/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/t1-git-blog.html">
+      You Git!<br><span class="archive_date">
+      2/27/15</span></a></li>
+  </ul>
 </div>
 
 <div id="blog_entry">
   <p>
-  I learned SO MUCH this week. This bootcamp is supposed to be 15-25 hours a week. I spent about 35 hours because I was researching so dang much. Here's the gist:
+  I learned SO MUCH this week. This bootcamp is supposed to be 15-25 hours a week. I spent about 40 hours because I was researching so dang much. Here's the gist:
   </p>
   <p>
   CSS. It means Cascading Style Sheets. It's applied to a basic html page by linking them like this in the html file. If CSS file is called example.css:
     <p>
-  <link rel="stylesheet" type="text/css" href="example.css">
+  &lt;link rel="stylesheet" type="text/css" href="example.css"&gt;
     </p>
   This goes into your &lt;head&gt; tag.
   </p>
   <p>
     The hardest thing I had to learn in CSS was about boxes and how to move them. So every element in HTML is a box. Everything. An image is a box. This paragraph is a box within my box for paragraphs. EVERYTHING IS A BOX. This is super important to remember because boxes inside boxes is how you move everything around.
   </p>
-  <img id="box_example" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/blog/BoxesExample.png?raw=true"/>
   <p>
+    <img id="box_example" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/BoxesExample.png?raw=true"/>
     In this example, you can see these boxes. Imagine the Yellow sidebar having words or logos. Either way, boxes. There's a header, and a footer, and a body. Basic layout for a basic page. I would start by making sure in the HTMl code that every box is a part of a bigger box that's easy to manipulate. For example, the header is one box, then a box for the body that includes BOTH the yellow and red boxes, then the footer box. The yellow box then has the three orange boxes, which since they're in a row, are easy to manipulate with no more sub-boxing.
   </p>
   <p>
@@ -91,8 +150,8 @@
   <p>
     Float, mentioned above, when given the value left or right, will move all the way to the left/right of its container. Kind of handy!
   </p>
-  <img src="http://www.w3.org/TR/REC-CSS2/images/boxdim.gif"/>
   <p>
+  <img id="margin_pic" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/boxmodel.gif?raw=true"/>
     Margins borders and padding. So every element actually has the properties in the above photo. When you set a width and height, it only affects the inner box. When you add padding, a border, or margin, it adds to the total box dimensions. Example, if you set a box with a width of 10px, add a border of 2px (will add twice on each side), and a margin of 5px (will add twice on each side), your new box width is actually 24px! THAT'S why it's moving all those other boxes on your friggin' screen! There's only one solution to this... a -webkit-box-sizing property you can set to "content-box/padding-box/border/box". It sets is so the width and height actually starts at the property you set, but it still doesn't reach the margins! These will still be added.
   </p>
   <p>
@@ -103,14 +162,10 @@
   </p>
 </div>
 
- <div id="blog_archive">
-  <h3>Blog Archive</h3>
-  <ul>
-    <li><a href="http://creatyvtype.github.io/blog/t2-css-design.html">I'm ObseCSSed<br><span>Sun 3/8/15</span></a></li><br>
-    <li><a href="http://creatyvtype.github.io/blog/c1-chefs-kitchen.html">Chefs in the Kitchen<br><span>2/28/15</span></a></li><br>
-    <li><a href="http://creatyvtype.github.io/blog/t1-git-blog.html">You Git!<br><span>Fri 2/27/15</span></a></li><br>
-  </ul>
 </div>
 
-</body>
-</html>
+<footer>
+  &copy; Copyright 2015 Majd Murad
+</footer>
+
+</body></html>

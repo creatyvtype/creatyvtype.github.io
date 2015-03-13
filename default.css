@@ -1,17 +1,15 @@
 body {
   font-family: 'Open Sans';
   background-color: whitesmoke
-}
-
-#sidebar {
-  float: left;
-  width: 166px;
-  height: 623px;
-  border-right: 4px solid black;
+;margin: 0;
 }
 
 aside {
-  background-color: whitesmoke;
+  float: left;
+  width: 166px;
+  /* display: inline-block; */
+  /* height: 100%; */
+  /* border-right: 4px solid black; */
 }
 
 #selfie {
@@ -46,9 +44,6 @@ aside {
   margin-top: -15px;
 }
 
-#non-sidebar {
-}
-
 header {
   height: 50px;
   margin-top: 5px;
@@ -66,6 +61,10 @@ nav {
   padding-left: 50px;
   color: rebeccapurple;
   padding-top: 10px;
+}
+
+#current_page {
+  color: red;
 }
 
 .nav {
@@ -97,14 +96,16 @@ a:link {
 }
 
 #main_body {
-  height: 500px;
-  margin-bottom: 2px;
+  /* display: inline-block; */
+  /* height: 545px; */
+  border-left: 2px solid black;
+  margin-left: 172px;
 }
 
 #body_left {
-  display: inline-block;
+  float: left;
   width: 500px;
-  height: 500px;
+  /* height: 545px; */
 }
 
 #tech_box {
@@ -115,12 +116,13 @@ a:link {
 #blog_box {
   height: 250px;
   margin: 15px;
+  border: 1px solid gray;
 }
 
 #body_right {
   display: inline-block;
   width: 300px;
-  height: 500px;
+  /* height: 545px; */
 }
 
 #mask_box {
@@ -135,8 +137,9 @@ a:link {
 
 footer {
   background-color: rgb(214, 214, 214);
-  height: 50px;
-  left: 170px;
-  position: relative;
-  width: 800px;
+  height: 30px;
+  width: 100%;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 14px;
 }
