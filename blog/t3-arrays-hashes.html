@@ -80,7 +80,184 @@ Add new <li> tag to top of line. -->
 
 <div id="blog_entry">
   <p>
-    JUST SAY WHAT YOU FEEL!
+    This entry will be about Arrays and Hashes in Ruby. I'll cover what these are, how to create new arrays and hashes, and some basic methods for each.
+  </p>
+  <p>
+    First off, what is are these things? Well, sometimes, you have to store some things in lists. In this case, an Array will store the list in an order, with a built-in numbered index (more on this in a second) which looks like this: <code>[0,1,2,"three",4]</code>. A Hash will store things in a key: value pair. Like this: <code>{"k1"=>"v1","k2"=>"v2"}</code> where k means key and v means value.
+  </p>
+  <p>
+    Arrays are basically like Hashes in that the value is the element you see, and the key is actually its index (position in the array). For example,
+  </p>
+  <code>array = ["one", "two", "three"]<br>
+    array[0] = "one"</code>
+  <p>
+    Here, the index 0 is actually the first position. Important to note that the numbering indexes always starts with 0. Anyway, in this way, the "key" in an array is the index, and the "value" is the element at that index. A hash with the keys all numbered starting from 0 would return the same value if called. The point is, though, that hashes can be used to use a different key than just a numbered index.
+  </p>
+  <h3>
+    Arrays
+  </h3>
+  <p>
+    Creating Arrays
+    <ol>
+      <li>Literal Constructor
+        <ul>
+          <li><code>array_name = []</code></li>
+          <li>Can add any number of elements separated by commas.</li>
+        </ul>
+      </li>
+      <li><code>array_name = Array.new</code>
+        <ul>
+          <li>Creates empty array.</li>
+          <li><code>array_name = Array.new(3)</code> creates an array with 3 "nil" elements.</li>
+          <li><code>array_name = Array.new(3, "abc")</code> creates an array with three "abc" elements: <code>["abc", "abc", "abc"]</code></li>
+          <li><code>array_name = Array.new(3){"abc"}</code> does the same thing.</li>
+        </ul>
+      </li>
+      <li>Array Method
+        <ul>
+          <li>Converts what you've got into an array</li>
+          <li>To check if these work, try <code>string.respond_to?(:to_ary)</code> or <code>string.respond_to?(:to_a)</code></li>
+          <li><code>.to_ary</code> (No strings!)</li>
+          <li><code>.to_a</code> (No strings!)</li>
+          <li><code>Array(string)</code> yields <code>[string]</code></li>
+        </ul>
+      </li>
+    </ol>
+  </p>
+  <p>
+    Calling elements in an Array
+    <ul>
+      <li><code>array[i]</code> where i is an index (integer), gives the element at that index.</li>
+      <li><code>array[i, n]</code> where i is an index and n is the number of elements to call. Ex: <code>array = [3,4,5,6,7]<br>array[2,2]<br>=>5,6</code></li>
+      <li><code>array[i, n] = a, b</code> will change the element at i with a, and the next element with b. n represents the number of elements to be changed.</li>
+      <li><code>array.slice(a,b)</code> Returns element at index a. b is optional, it will return that number of elements starting with a..</li>
+      <li><code>array.slice!(a,b)</code> Does the same as above, but changes the array to only include the elements returned.</li>
+      <li><code>array.values_at(a, b, c...)</code> Gives the elements at the specified index a, b, c, etc.</li>
+    </ul>
+  </p>
+  <p>
+    Add and remove elements
+    <ul>
+      <li><code>array.unshift(0)</code> Will add 0 to beginning of array.</li>
+      <li><code>array.push(0)</code> Will add 0 to the end of array. Can add more than one at a time.</li>
+      <li><code>array &lt;&lt;0</code> Will add 0 to the end of array. Can NOT add more than one at a time.</li>
+      <li><code>array.shift</code> Removes and prints 1st element.</li>
+      <li><code>array.pop</code> Removes and prints last element.</li>
+      <li><code>array.shift!</code> and <code>array.pop!</code> Performs action and permanently changes the array.</li>
+    </ul>
+  </p>
+  <p>
+    Combining Arrays
+    <ul>
+      <li><code>array1.concat(array2)</code> Adds elements of array2 to the end of array1.</li>
+      <li><code>array1 = array1 + array2</code> Adds elements of array2 to the end of array1.</li>
+      <li><code>array1.replace(array2)</code> Replaces elements in array1 with elements of array2.</li>
+    </ul>
+  </p>
+  <p>
+    Transform Array
+    <ul>
+      <li><code>array.flatten(n)</code> Removes n layers of nested arrays and puts their elements in the array. Without (n), it just removes all of the arrays nested, putting all of the elements in order.</li>
+      <li><code>array.flatten!(n)</code> Does the same as above, but makes change permanent.</li>
+      <li><code>array.reverse</code> and <code>array.reverse!</code> Reverses the positions of all elements in the array.</li>
+      <li><code>array.join()</code> Combines elements into a string. The parameter could be <code>(" ")</code> which will add a space between all of the elements.</li>
+      <li><code>array * " "</code> Does the same as above.</li>
+      <li><code>array.uniq</code> and <code>array.uniq!</code> Removes duplicated elements.</li>
+      <li><code>array.compact</code> and <code>array.compact!</code> Removes nil elements.</li>
+    </ul>
+  </p>
+  <p>
+    Array Query
+    <ul>
+      <li><code>array.size</code> Gives number of elements.</li>
+      <li><code>array.empty?</code> True if empty, false if not.</li>
+      <li><code>array.include?(item)</code> True if item is there, false if not.</li>
+      <li><code>array.count(item)</code> Gives number of times item is in the array.</li>
+      <li><code>array.first(n)</code> Gives first n number of elements.</li>
+      <li><code>array.last(n)</code> Gives last n number of elements.</li>
+      <li><code>array.sample(n)</code> Gives n number of random elements.</li>
+    </ul>
+  </p>
+  <h3>
+    Hashes
+  </h3>
+  <p>
+    Creating Hashes
+    <ol>
+      <li>Literal Constructor
+        <ul>
+          <li><code>h = {"k1"=>"v1", "k2"=>"v2", etc.}</code></li>
+          <li>Can add any number of paired key/value pairs separated by commas.</li>
+        </ul>
+      </li>
+      <li><code>h = Hash.new</code>
+        <ul>
+          <li>Creates empty hash.</li>
+          <li><code>h = Hash.new(3)</code> Sets default value at 3 for non-existant keys</li>
+          <li><code>h.default(value)</code> Sets default value.</li>
+          <li><code>h = Hash.new {|hash, key| hash[key]=0}</code> Makes it so if a nonexistant key is called, it will add that key to the hash with the default value of 0.</li>
+        </ul>
+      </li>
+      <li><code>Hash.[]</code> Where [] includes an EVEN number elements, will order the pairs as key/value pairs, so 0=>1, 2=>3 and so on. Can also work with nested arrays.</li>
+      <li><code>something.to_hash</code> Will turn that something, usually an array, into a hash. If the argument doesn't have to_hash as a method, fatal error occurs.</li>
+    </ol>
+  </p>
+  <p>
+    Adding to Hash
+    <ul>
+      <li><code>hash["new_key"] = "new_value"</code> Creates that key/value pair.</li>
+      <li><code>hash.[]("new_key", "new_value")</code> Does the same, but the above is easier on the eyes, hence "syntactic sugar".</li>
+      <li><code>hash.store("new_key", "new_value")</code> Does the same.</li>
+      <li>Keys must be unique or they'll be overwritten.</li>
+    </ul>
+  </p>
+  <p>
+    Calling in Hash
+    <ul>
+      <li><code>hash[key]</code> Gives the value to that key.</li>
+      <li><code>hash.fetch(key)</code> Gives the value to that key.</li>
+      <li><code>hash.values_at(key1, key2)</code> Gives value of each key in an array like this: <code>[value1, value2]</code></li>
+    </ul>
+  </p>
+  <p>
+    Combining Hashes
+    <ul>
+      <li><code>h1.update(h2)</code> Adds h2's key/value pairs to h1. Overwrites duplicates.</li>
+      <li><code>h3 = h1.merge(h2)</code> Creates new hash. Doesn't overwrite h1 if duplicated, but figures out which duplicate to keep.</li>
+      <li><code>h1.merge!(h2)</code> Same as .update.</li>
+    </ul>
+  </p>
+  <p>
+    Select/Reject in Hashes
+    <ul>
+      <li><code>hash.select {|k,v| k > 1}</code> Will give you the k/v pairs where k is an integer greater than 1.</li>
+      <li><code>hash.reject {|k,v| k > 1}</code> Does the opposite. Gives you the k/v pairs that DON'T have k > 1.</li>
+      <li><code>hash.select!</code> and <code>hash.reject!</code> will permanently change the hash with those parameters.</li>
+    </ul>
+  </p>
+  <p>
+    Transforming Hashes
+    <ul>
+      <li><code>hash.invert</code> Keys become values, values become keys. Duplicates will be overwritten.</li>
+      <li><code>hash.clear</code> Empties the hash.</li>
+      <li><code>hash.replace</code> Replaces the key in pair with the one provided.</li>
+    </ul>
+  </p>
+  <p>
+    Query in Hashes
+    <ul>
+      <li><code>hash.has_key(key)</code> True if key exists, False if not.</li>
+      <li><code>hash.include?(key)</code> Same.</li>
+      <li><code>hash.key?(key)</code> Same.</li>
+      <li><code>hash.member?(key)</code> Same. </li>
+      <li><code>hash.has_value(value)</code> True if value exists, False if not.</li>
+      <li><code>hash.value?(value)</code> Same.</li>
+      <li><code>hash.empty?</code> True if empty, False if not.</li>
+      <li><code>hash.size</code> Gives number of pairs in hash.</li>
+    </ul>
+  </p>
+  <p>
+    Well, that's a lot! But hopefully will be helpful as a guide for myself and others in the future.
   </p>
 </div>
 
