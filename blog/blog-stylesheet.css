@@ -154,3 +154,7 @@ li {
   float: right;
   margin-left: 10px;
 }
+
+code {
+  background-color: #d2d2d2;
+}
