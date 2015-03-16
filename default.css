@@ -110,6 +110,10 @@ a:link {
 #tech_box {
   height: 250px;
   margin: 15px;
+  color: rgb(246, 45, 45);
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: -20px;
 }
 
 #blog_box {
