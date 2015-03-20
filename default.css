@@ -1,7 +1,8 @@
 body {
   font-family: 'Open Sans';
-  background-color: whitesmoke
-;margin: 0;
+  background-color: whitesmoke;
+  margin: 0;
+  color: black;
 }
 
 #contact {
@@ -94,15 +95,14 @@ a:link {
 }
 
 #main_body {
-  width: 700px;
   display: inline-block;
   border-left: 2px solid black;
 }
 
 #body_left {
+  display: inline-block;
   float: left;
   width: 500px;
-  /* height: 545px; */
 }
 
 #tech_box {
@@ -118,12 +118,72 @@ a:link {
   height: 250px;
   margin: 15px;
   border: 1px solid gray;
+  color: darkslateblue;
+  font-size: 14px;
+}
+
+#blog_box p {
+  width: 230px;
+  padding-left: 10px;
+  /* padding-right: 50px; */
+}
+
+#current_blog {
+    display: inline-block;
+    width: 250px;
+
+    height: 250px;
+}
+
+#blog_title_index {
+  font-size: 30px;
+  margin: 0px;
+  text-align: center;
+  color: rgb(68, 173, 101);
+}
+
+#blog_subtitle_index {
+  color: rgb(93, 178, 215);
+  margin: 0px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#blog_date_index {
+  color: rgb(142, 199, 225);
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+}
+
+#archive_box {
+  background: lightblue;
+  display: inline-block;
+  width: 215px;
+  height: 250px;
+  float: right;
+  overflow: scroll;
+  border-left: 1px solid gray;
+}
+
+#archive_box h3 {
+    margin-top: 5px;
+
+}
+
+#archive_box ul {
+    margin-left: -10px;
+
+}
+
+#archive_box a {
+  color: rgb(88, 107, 207);
 }
 
 #body_right {
   display: inline-block;
+  position: absolute;
   width: 300px;
-  /* height: 545px; */
 }
 
 #mask_box {

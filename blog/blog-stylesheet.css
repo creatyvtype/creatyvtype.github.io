@@ -61,20 +61,16 @@ a:hover {
 #blog_title {
     font-size: 35px;
     color: rgb(68, 173, 101);
-    align-self: center;
-    /* margin-left: 40px; */
 }
 #blog_subtitle {
   color: rgb(93, 178, 215);
   margin-top: 10px;
-  /* margin-left: 30px; */
   font-size: 25px;
 }
 #blog_date {
   color: rgb(142, 199, 225);
   font-size: 20px;
   margin-top: -25px;
-  /* margin-left: 30px; */
 }
 
 #right {
@@ -93,7 +89,6 @@ a:hover {
 
 p{
     width:  100%;
-
     margin-right: 30%;
 }
 
