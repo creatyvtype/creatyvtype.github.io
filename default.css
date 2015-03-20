@@ -4,10 +4,10 @@ body {
 ;margin: 0;
 }
 
-aside {
+#contact {
   float: left;
   width: 166px;
-  /* display: inline-block; */
+  display: inline-block;
   /* height: 100%; */
   /* border-right: 4px solid black; */
 }
@@ -85,7 +85,6 @@ form {
 }
 
 a:link {
-  word-spacing: 3px;
 }
 
 #nametag {
@@ -95,10 +94,9 @@ a:link {
 }
 
 #main_body {
-  /* display: inline-block; */
-  /* height: 545px; */
+  width: 700px;
+  display: inline-block;
   border-left: 2px solid black;
-  margin-left: 172px;
 }
 
 #body_left {
