@@ -24,7 +24,9 @@ a:hover {
 }
 
 #main_body_blog {
-
+ width: 700px;
+ display: inline-block;
+  border-left: 2px solid black;
 }
 
 #blog_head {
