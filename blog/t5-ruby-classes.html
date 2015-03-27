@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="en-US"><head>
+  <title>Majd Murad</title>
+  <LINK REL="SHORTCUT ICON" HREF="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/ArteMasksLogo.png?raw=true"/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../default.css">
+  <link rel="stylesheet" type="text/css" href="blog-stylesheet.css">
+</head><body>
+
+<!-- TO UPDATE PAGE
+  1) Change Blog href in Nav (TEMPLATE)
+  2) Add entry to Archive (TEMPLATE)
+  3) Copy top to Blog_head from here to old files. (OLD FILES)
+  4) Adjust blog_head buttons and such (OLD FILES)
+  5) Update Blog Head (ON FILE)
+  6) Add blog entry (ON FILE)
+  7) INDEX changes: nav href, fix body (INDEX)
+-->
+
+<nav>
+  <span id="majd">Majd Murad</span>
+  <a class="nav" href="http://creatyvtype.github.io">Home</a>
+  <a class="nav" href="http://creatyvtype.github.io">About Me</a>
+  <a id="current_page" class="nav" href="http://creatyvtype.github.io/blog/c5-feedback.html" target=_blank>Blog</a>
+  <a class="nav" href="http://creatyvtype.github.io">Tech</a>
+  <a class="nav" href="http://artemasks.com">Mask Making</a>
+  <a class="nav" href="http://creatyvtype.github.io">Theatre</a>
+  <form id="search" action="/search" method="get" autocomplete="off">
+    <input name="q" type="text" placeholder="search" value tabindex="1" autocomplete="off" maxlength="240">
+  </form>
+</nav>
+
+<aside id="contact">
+  <img id="selfie" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/Gravatar.JPG?raw=true"/>
+  <a href="http://github.com/creatyvtype"<img class="social_link" id="github" src="./github_logo/png/github-mark-64px.png"/></a>
+  <a href="https://www.linkedin.com/pub/majd-murad/4a/a16/907" target="blank"><img class="social_link" id="linkedin" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/LinkedInLogo.png?raw=true"/></a>
+  <a href="https://twitter.com/ShaikhMajdi" target=_blank><img class="social_link" id="twitter" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/TwitterLogo.png?raw=true"/></a>
+  <a href=mailto:murad.majd@gmail.com?subject=From%20Your%20Website><img class="social_link" id="gmail" src="https://github.com/creatyvtype/creatyvtype.github.io/blob/master/imgs/gmaillogo.png?raw=true"/></a>
+</aside>
+
+
+<aside id="blog_archive">
+  <!--TO UPDATE
+Add new <li> tag to top of line. -->
+  <h3>Blog Archive</h3>
+  <ul>
+    <li><a href="http://creatyvtype.github.io/blog/c5-feedback.html">
+      Feedbackinator<br><span class="archive_date">
+      3/26/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/t5-ruby-classes.html">
+      Ruby is a Class Act<br><span class="archive_date">
+      3/26/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/t4-enumerable-methods.html">
+      Some Ruby Enumberable Methods<br><span class="archive_date">
+      3/20/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/c4-tech-issues.html">
+      A Current Tech Issue<br><span class="archive_date">
+      3/20/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/c3-thinking-style.html">
+      Gregoric Thinking Style<br><span class="archive_date">
+      3/13/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/t3-arrays-hashes.html">
+      Ruby Arrays and Hashes<br><span class="archive_date">
+      3/13/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/t2-css-design.html">
+      I'm ObseCSSed<br><span class="archive_date">
+      3/8/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/c1-chefs-kitchen.html">
+      Chefs in the Kitchen<br><span class="archive_date">
+      2/28/15</span></a></li>
+    <li><a href="http://creatyvtype.github.io/blog/t1-git-blog.html">
+      You Git!<br><span class="archive_date">
+      2/27/15</span></a></li>
+  </ul>
+</aside>
+
+<div id="main_body_blog">
+
+<div id="blog_head">
+   <!-- TO UPDATE
+  1) Change left button href
+  2) Change blog title href to same
+  3) Change blog subtitle and date
+  4) Change right button to prev blog href
+-->
+  <a class="button" id="left" href="http://creatyvtype.github.io/blog/c5-feedback.html">&lt;</a>
+  <a href="http://creatyvtype.github.io/blog/t5-ruby-classes.html">
+  <div id="blog_head_text">
+    <h2 id="blog_title">Majd's Blog</h2>
+    <h2 id="blog_subtitle">Ruby is a Class Act</h2>
+    <h4 id="blog_date">3/26/15</h4>
+  </div><a/>
+  <a class="button" id="right" href="http://creatyvtype.github.io/blog/t4-enumerable-methods.html">&gt;</a>
+</div>
+
+<div id="blog_entry">
+<p>What's going on here...:</p>
+<div class="code_block">
+<code>
+<pre>class Wardrobe
+  def initialize(type, color)
+    @type = type
+    @color = color
+  end
+  def type
+    @type
+  end
+  def color
+    @color
+  end
+end</code>
+</div>
+<p>
+  This is a "class" in Ruby. Did you think I was going to talk about a classy person named Ruby? NO! You Git! Heheh. This is the basic structure for class. Which is used when you want to make multiple types of object that have the same other things going on like common methods and properties.
+</p>
+<p>
+  In the example above, we start by defining the class as Wardrobe. Note that it's capitalized, unlike other things in Ruby. That sets is apart as a class.
+</p>
+<p>
+  Next is initialize, which will start up anything in that method when you create a new object of that class. Here, it takes two parameters: type and color.
+</p>
+<p>
+  The next two method definitions, type, and color, simply call back the original word that was entered. That's where we COULD get complicated and be like "Take this and split up the characters and multiply and yadda yadda..." Basically where we would manipulate things if that's what we wanted to do.
+</p>
+<p>
+  Creating a new object with this class is easy. It's the next step:
+</p>
+<div class="code_block">
+<code>
+cute_new_top = Wardrobe.new("shirt", "red")
+</code>
+</div>
+<p>
+  This creates a new Object named <code>cute_new_top</code> that is a red shirt. Now we can call the little methods we wrote and it should give us back what put in, unchanged:
+</p>
+<div class="code_block">
+<code>
+<pre>cute_new_top.type  =>"shirt"
+cute_new_top.color =>"red"</code>
+</div>
+<p>
+  I fudged this a little to make it clear. The arrows show you the output of what's plugged in. There is a shortcut to this so we don't have to define all of the variables, and that's done with attr_reader. Let's rewrite the code using it:
+</p>
+<div class="code_block">
+<code>
+<pre>
+class Wardrobe
+  attr_reader :type, :color
+  def initialize(type, color)
+    @type = type
+    @color = color
+  end
+end</code>
+</div>
+<p>
+  There! Much cleaner! All this does is it makes is so we can "read" the attribute by calling it like we did in the last example. There are two others we could do like this, and they are <code>attr_writer</code> and <code>attr_accessor</code>. The writer makes something that we can write to, and accessor does both reading AND writing. We don't always want to call up a variable or write to it, necessarily, so this provides us options that keeps everything organized. No examples for this here, but I think that's quite enough for now! Hope you had fun!
+</p>
+
+</div>
+
+</div>
+
+<footer>
+  &copy; Copyright 2015 Majd Murad
+</footer>
+
+</body></html>
