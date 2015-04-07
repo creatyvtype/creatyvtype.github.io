@@ -91,40 +91,88 @@ Add new <li> tag to top of line. -->
   3) Change blog subtitle and date
   4) Change right button to prev blog href
 -->
-  <a class="button" id="left" href="http://creatyvtype.github.io/blog/t5-ruby-classes.html">&lt;</a>
+  <a class="button" id="left" href="http://creatyvtype.github.io/blog/t7-JavaScript.html">&lt;</a>
   <div id="blog_head_text">
     <h2 id="blog_title">Majd's Blog</h2>
-    <h2 id="blog_subtitle">Some Ruby Enumerable Methods</h2>
-    <h4 id="blog_date">3/20/15</h4>
+    <h2 id="blog_subtitle">Ruby-Colored JavaScript</h2>
+    <h4 id="blog_date">4/7/15</h4>
   </div>
-  <a class="button" id="right" href="http://creatyvtype.github.io/blog/c4-tech-issues.html">&gt;</a>
+  <a class="button" id="right" href="http://creatyvtype.github.io/blog/c7-values.html">&gt;</a>
 </div>
 
 <div id="blog_entry">
+  <img width=500px src="http://cdn.shopify.com/s/files/1/0339/5565/products/toarco3web_1024x1024.png?v=1418533820"/>
   <p>
-    This was a simple assigned blog. We were asked just to talk about one enumerable method out of three. So I'm going to go over #group_by.
+    Can you believe there's a coffee place called Ruby!? That's genius! Anyway, this entry is about Ruby and JavaScript.
   </p>
   <p>
-    #group_by takes in an array, creates hash where key is the criteria for how you want it grouped, and the value for the key will be an array of the elements that fit that criteria from the original array.
+    I've come to understand, at least at my rudimentary level of programming, that all of the programming languages are very much the same, they just have different syntax and different words for things... some slightly different ways of building pretty much the same thing.
   </p>
-  <ul>
-    <li>Use: To group up elements in an array</li>
-    <li>Input: <code>array.group_by {|element| criteria}</code></li>
-    <li>Output: <code>{"criteria"=>[elements that meet this criteria], repeat, etc.}</code></li>
-    <li>Example:</li>
+  <p>
+    For example, just the words used to make similar things happen like:
+  </p>
+  <div class="code_block">
     <code>
-      array = ["Alan", "Bob", "Susie", 1, 3, 5, "Robert"]<br>
-      array.group_by {|element| element.is_a? (Fixnum)}<br>
-      => {false=>["Alan", "Bob", "Susie", "Robert"], true=>[1, 3, 5]}
+    <pre>
+    Creating a variable:
+
+    JavaScript:
+    var varName = "string";
+
+    Ruby:
+    var_name = "string"
     </code>
-    <li>Note how it separated into true or false based on our groups. This tests the element if it is a Fixnum, or number. Here's another example:</li>
+  </div>
+  <p>
+    Here, we get to leave out the "var" to declare, and leave out the semicolon. The two languages have different conventions fr how to name variables, and I think the above way illustrates them pretty well. How about this:
+  </p>
+  <div class="code_block">
     <code>
-      array.group_by {|element| element.class}<br>
-      => {String=>["Alan", "Bob", "Susie", "Robert"], Fixnum=>[1, 3, 5]}
+    <pre>
+    Printing to the console:
+
+    JavaScript:
+    console.log("Hello");
+
+    Ruby:
+    puts "Hello"
     </code>
-    <li>See, now we're more specific. You can use this for any criteria.</li>
-    <li>This returns a hash, but doesn't store it. To store it, be sure to assign the code to a new or existing variable.</li>
-  </ul>
+  </div>
+  <p>
+    I get console.log, but it's so complicated. "Eloquent JavaScript" even says there's no other way to shorten this. Really? Really EJS? How about "puts" or even better, in Ruby, "p". Just "p"!!!! I mean, it behaves a little differently than "puts" or even "print" but we won't get into that. Oh, did I mention we didn't have to put parentheses or a semicolon? Just sayin'... and how about THIS:
+  </p>
+  <div class="code_block">
+    <code>
+    <pre>
+    If statements:
+
+    JavaScript:
+    if (a &lt; b) {
+      //code;
+    }
+    else if (a &gt; b) {
+      //code;
+    }
+    else {
+      //code;
+    }
+
+    Ruby:
+    if a &lt; b
+      #code
+    elsif a &gt; b
+      #code
+    else
+      #code
+    end
+    </code>
+  </div>
+  <p>
+    Was it Polonius in Hamlet that said "Brevity is the soul of wit"? (The comedy there was that Polonius rambled... much like I do... how ironic...) Anyway, huge differences here, again the parentheses and the semicolons, but also the curly bracers vs. just "end" for Ruby letting us know that's all. Also noteable is the way the commenting works in each language. This is illustrated a little above.
+  </p>
+  <p>
+    I hope y'all find this to be a little helpful, if not, make you aggravated at how JavaScript is so finicky about its bracers and brackets and bawbles. Nah, I'm sure I'll learn to love JavaScript... if not, I just will grin and bear it.
+  </p>
 </div>
 
 </div>
