@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="en-US"><head>
+  <title>Git Cheatsheet</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="cheat.css">
+</head><body>
+
+<header>
+<h1>Git Cheatsheet</h1>
+<h4>Majd Murad and Diana Lozano</h4>
+</header>
+
+<section>
+<h2>Set up your repository</h2>
+<ol>
+  <li>Fork url</li>
+  <ul>
+    <li>Go to the Github page you want to fork</li>
+    <li>Click the fork icon at top-right of page.</li>
+  </ul>
+  <li>Enable issues</li>
+  <ul>
+    <li>Go to repository settings located at bottom right of navigation bar</li>
+    <li>Check the "issues" box</li>
+  </ul>
+  <li>Clone url</li>
+  <ul>
+    <li>Copy url link from forked repository</li>
+    <li>Enter code into terminal, replace "url" with copied url:</li>
+  </ul>
+  <code>
+    <pre>
+      git clone "url"
+    </pre>
+  </code>
+  <li>Check the remote</li>
+  <ul>
+    <li>This will tell you where pulls and pushes are pointing to.</li>
+  </ul>
+  <code>
+    <pre>
+      git remote -v
+    </pre>
+  </code>
+  <li>Set up your upstream</li>
+  <ul>
+    <li>Copy original url (not forked repo)</li>
+    <li>Enter code, replacing "url" with copied url:</li>
+  </ul>
+  <code>
+    <pre>
+      git remote add upstream "url"
+    </pre>
+  </code>
+  <li>Check the remote again</li>
+  <ul>
+    <li>This will tell you where pulls, pushes, and fetches are pointing to.</li>
+  </ul>
+  <code>
+    <pre>
+      git remote -v
+    </pre>
+  </code>
+</ol>
+
+<h2>Fetching Changes</h2>
+<ol>
+  <li>Check the remote for upstream and origin fetch and push</li>
+  <code>
+    <pre>
+      git remote -v
+    </pre>
+  </code>
+  <li>Fetch the changes</li>
+  <code>
+    <pre>
+      git fetch upstream
+    </pre>
+  </code>
+  <li>Merge the changes</li>
+  <code>
+    <pre>
+      git merge upstream/master
+    </pre>
+  </code>
+  <li>Commit and push the changes</li>
+  <code>
+    <pre>
+      git commit -m "Message for the commit"
+      git push origin master
+    </pre>
+  </code>
+  <li>Check Github</li>
+  <ul>
+    <li>Go to Github to verify the changes were made</li>
+  </ul>
+</ol>
+
+<h2>Git Work Flow and Branching</h2>
+<ol>
+  <li>Add collaborators</li>
+  <ul>
+    <li>Go to your repository</li>
+    <li>Go to your settings on the right side of page</li>
+    <li>Add your collaborators</li>
+  </ul>
+  <li>Clone the repository</li>
+  <ul>
+    <li>All collaborators must clone the repository</li>
+    <li>Follow steps above for cloning</li>
+  </ul>
+  <li>Create Feature Branch</li>
+  <ul>
+    <li>Type following code, make up a "branch-name"</li>
+    <code>
+    <pre>
+      git checkout -b "branch-name"
+    </pre>
+  </code>
+    <li>Now you're in a branch of the repository</li>
+  </ul>
+  <li>Make your changes</li>
+    <ul>
+    <li>Make the changes to files you need to</li>
+    <li>Push changes from branch to GitHub</li>
+    <code>
+    <pre>
+      git push origin "branch-name"
+    </pre>
+  </code>
+  </ul>
+  <li>Create a Pull Request</li>
+  <ul>
+    <li>Go to GitHub repository</li>
+    <li>Click green "pull request" button</li>
+    <li>Add a commit message</li>
+    <li>Tag contributors using @user_name, as needed</li>
+    <li>Add comments to lines of code, as needed</li>
+    <li>Submit pull request</li>
+  </ul>
+  <li>Review Pull Request</li>
+  <ul>
+    <li>"Master" person should look over changes</li>
+    <li>Merge the pull request in GitHub</li>
+  </ul>
+  <li>Merge Conflicts</li>
+  <ul>
+    <li>If a person pushes changes where a merge conflict exists, you will get a merge conflict.</li>
+    <li>Type the following to check which files have merge conflicts:</li>
+    <code>
+    <pre>
+      git status
+    </pre>
+  </code>
+    <li>Go into that file, and you will see something like this:</li>
+    <code>
+    <pre>
+      &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;HEAD&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+
+      some_code
+
+      ==================================
+
+      other_code
+
+      &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;small_conflict&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+  </pre>
+  </code>
+  <li>Choose which side of the "====" bar you want to keep, delete everything else.</li>
+  <li>Commit changes again and push.</li>
+  </ul>
+</ol>
+</section>
+
+
+
+</body>
+</html>

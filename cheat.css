@@ -1,0 +1,41 @@
+body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: beige;
+  color: slateblue;
+}
+
+header {
+  background-color: slateblue;
+  text-align: center;
+  height: 120px;
+  padding: 10px;
+}
+
+h1 {
+  color: darkgoldenrod;
+}
+
+h2 {
+  color: coral;
+}
+
+h4 {
+  color: burlywood;
+}
+
+section {
+  margin: 50px auto;
+  width: 500px;
+}
+
+ul {
+    list-style: circle;
+}
+
+pre {
+  background-color: burlywood;
+  color: darkcyan;
+  padding-top: 13px;
+  border-radius: 5px;
+}
+
