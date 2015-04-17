@@ -94,21 +94,79 @@ Add new <li> tag to top of line. -->
   2) Change blog subtitle and date
   3) Change right button to prev blog href
 -->
-  <a class="button" id="left" href="http://creatyvtype.github.io/blog/c6-stereotype-threat.html">&lt;</a>
+  <a class="button" id="left" href="http://creatyvtype.github.io/blog/t8-tech.html">&lt;</a>
   <div id="blog_head_text">
     <h2 id="blog_title">Majd's Blog</h2>
-    <h2 id="blog_subtitle">Blog Title</h2>
-    <h4 id="blog_date">Date</h4>
+    <h2 id="blog_subtitle">RegEx</h2>
+    <h4 id="blog_date">4/15/15</h4>
   </div>
-  <a class="button" id="right" href="http://creatyvtype.github.io/blog/t6-oop-concepts.html">&gt;</a>
+  <a class="button" id="right" href="http://creatyvtype.github.io/blog/c8-conflict.html">&gt;</a>
 </div>
 
 <div id="blog_entry">
+  <img src="http://www.codepolitan.com/wp-content/uploads/2015/04/cp_img_regex_big.gif"/>
   <p>
-    JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU <a href="#">Hyperlink</a> FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL!JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL!JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL!
+    A Regular Expression, or regex, or regexp, is used to match a pattern against a string. The literal constructors are <code>/.../</code> and <code>%r{...}</code>. The other constructor is <code>Regexp::new</code>. Examples:
+  </p>
+  <div class="code_block">
+    <code>
+    <pre>
+      /dog/.match('dogwalker')
+      =>#&lt;MatchData "dog"&gt;
+
+      /dog/ =~ ('cat')
+      =>nil
+    </code>
+  </div>
+  <p>
+    Note that we can use <code>#match</code> or <code>=~</code> to test if it matches. But <code>=~</code> will return nil or the position in the string it finds the match.
   </p>
   <p>
-    JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL!JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL!JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL!JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL! JUST SAY WHAT YOU FEEL!
+    Some characters have to be "escaped" with a backslash because they have specific meanings in a regexp. Those characters are:
+  </p>
+  <div class="code_block">
+    <code>
+    <pre>
+      { => \{
+      } => \}
+      ( => \(
+      ) => \)
+      [ etc.
+      ]
+      .
+      ?
+      +
+      *
+      Example:
+      /1 \+ 2/.match('1 + 2')
+      =>#&lt;MatchData "1 + 2"&gt;
+    </code>
+  </div>
+  <p>You can interpolate the match criteria like so:
+  </p>
+  <div class="code_block">
+    <code>
+    <pre>
+      name = "Majd"
+      /#{name}/.match("Hey, Majd")
+      =>#&lt;MatchData "Majd"&gt;
+    </code>
+  </div>
+  <p>
+    The following are different ways to check different criteria. Note the characters used:
+  </p>
+  <div class="code_block">
+    <code>
+    <pre>
+      /[aeiou]/ => brackets check individual
+          characters listed without commas
+      /[0-9a-d]/ => hyphen checks a range
+      /[^a-d]/ => caret checks if NOT in range
+
+    </code>
+  </div>
+  <p>
+    I think that's good for now. I haven't used these, so I don't want to add examples I don't yet understand. I may come back and add more to this, since I think it might be easier for me to read than RubyDocs (who am I kidding? RubyDocs is great!) In any event, I hope you enjoyed my little demo on RegExp.
   </p>
 </div>
 
