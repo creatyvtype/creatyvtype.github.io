@@ -1,6 +1,5 @@
 body {
-  /* font-family: 'Open Sans'; */
-  /* background-color: whitesmoke; */
+  /* background-color: rgb(213, 213, 213); */
   /* width: 850px; */
   /* margin: 0; */
 }
@@ -20,7 +19,7 @@ body {
 }
 
 a:link {
-  color: rgb(100, 185, 90);
+  color: rgb(141, 160, 234);
   font-weight: bold;
   text-decoration: none;
 }
