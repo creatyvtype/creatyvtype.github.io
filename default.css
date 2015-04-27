@@ -58,18 +58,18 @@ header {
 
 nav {
   height: 40px;
-  background-color: #D6D6D6;
+  background-color: rgba(173, 161, 161, 0.54);
   padding-left: 50px;
-  color: rebeccapurple;
+  color: rgb(51, 79, 153);
   padding-top: 10px;
 }
 
 #current_page {
-  color: red;
+  color: #3383CC;
 }
 
 .nav {
-  color: rgb(86, 139, 91);
+  color: #4B7CA8;
   margin-right: 30px;
 }
 
@@ -108,7 +108,7 @@ a:link {
 #tech_box {
   height: 250px;
   margin: 15px;
-  color: rgb(246, 45, 45);
+  color: #40A4FF;
   text-align: center;
   padding-top: 20px;
   margin-bottom: -20px;
